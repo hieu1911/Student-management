@@ -98,6 +98,8 @@ class StudentFormActivity : AppCompatActivity() {
             lifecycleScope.launch(Dispatchers.IO) {
                 studentDao.deleteById(id)
             }
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         if (birthDay > 0) {
